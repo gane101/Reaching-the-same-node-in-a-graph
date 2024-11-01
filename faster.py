@@ -5,7 +5,7 @@ import multiprocessing as mp
 # If you know any way to optimize ths code further, I would appreciate it.
 
 # For nxn Matrix
-n = 5 # make sure to change it at line 37
+n = 5 # make sure to change it at line 40
 try:
 	f = open("data.txt",'x+')
 except FileExistsError:
@@ -37,7 +37,7 @@ def matmul(m1,cl):
 	return res
 
 def start_from(s):
-	# n = 5
+	n = 5
 	for g in range(s,s+frac):
 		a = bin(g)[2:]
 
@@ -125,7 +125,7 @@ def start_from(s):
 					f.write(str([itr]+[g]) + "\n")
 
 
-frac = 2**22
+frac = 2**23
 
 if __name__ == '__main__':
 
